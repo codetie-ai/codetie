@@ -2,6 +2,9 @@
   "name": "create-codetie",
   "version": "1.0.0",
   "description": "CLI tool to set up codetie projects",
+  "homepage": "https://codetie.ai",
+  "repository": "regenrek/codetie",
+  "license": "MIT",
   "bin": {
     "codetie-create": "./index.js"
   },
@@ -13,7 +16,9 @@
     "cli",
     "xcode",
     "swift",
-    "project-setup"
+    "project-setup",
+    "cursor",
+    "cursor-ai"
   ],
   "dependencies": {
     "chalk": "^5.3.0",
