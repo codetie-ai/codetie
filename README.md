@@ -28,12 +28,12 @@ Before you begin, ensure you have the following installed:
 
 With pnpm:
 ```
-pnpm dlx degit https://github.com/regenrek/Cursor-XCode-Swift-Sync
+pnpm dlx degit git@github.com:regenrek/Cursor-XCode-Swift-Sync.git
 ```
 
 With npm:
 ```
-npx degit https://github.com/regenrek/Cursor-XCode-Swift-Sync
+npx degit git@github.com:regenrek/Cursor-XCode-Swift-Sync.git
 ```
 
 Classic:
