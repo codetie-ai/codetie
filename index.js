@@ -7,7 +7,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 (async () => {
-    console.log(chalk.green('\nWelcome to the Cursor-XCode-Swift-Sync Project Setup\n'));
+    console.log(chalk.green('Welcome to the codetie (Sync swift + xcode) Project Setup 🚀\n'));
 
     const answers = await inquirer.prompt([
         {
@@ -82,13 +82,13 @@ app_version: {{APP_VERSION}}
 build_number: {{BUILD_NUMBER}}
 `, variables));
 
-    console.log(chalk.blue('\nCreated codetie.yml'));
+    console.log(chalk.blue('\n📄 Created codetie.yml'));
 
     // Generate project.yml from template
     const projectYmlTemplate = fs.readFileSync(path.join(__dirname, 'templates', 'project.yml.mustache'), 'utf-8');
     fs.writeFileSync('project.yml', mustache.render(projectYmlTemplate, variables));
 
-    console.log(chalk.blue('Generated project.yml'));
+    console.log(chalk.blue('🔧 Generated project.yml'));
 
     // Generate other necessary files
     const filesToGenerate = [
@@ -107,8 +107,8 @@ build_number: {{BUILD_NUMBER}}
         const outputContent = mustache.render(templateContent, variables);
         fs.mkdirSync(path.dirname(outputPath), { recursive: true });
         fs.writeFileSync(outputPath, outputContent, { mode: 0o755 });
-        console.log(chalk.blue(`Generated ${outputPath}`));
+        console.log(chalk.blue(`📁 Generated ${outputPath}`));
     });
 
-    console.log(chalk.green('\nProject setup complete.\n'));
+    console.log(chalk.green('\n✅ Project setup complete! Happy coding! 🎈\n'));
 })();

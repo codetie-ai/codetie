@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "CLI tool to set up codetie projects",
   "bin": {
-    "create-codetie": "./index.js"
+    "codetie-create": "./index.js"
+  },
+  "scripts": {
+    "release": "release-it"
   },
   "keywords": [
     "codetie",
