@@ -4,8 +4,6 @@ Cursor-XCode-Swift-Sync is a project boilerplate that leverages the power of [Xc
 
 Read more at [codetie.ai](https://codetie.ai)
 
-[![Watch the video](/public/game.png)](https://res.cloudinary.com/ddbi0suli/video/upload/v1725936468/codetie/flappy_bird_zai8ig.mov)
-
 [![Watch the video](/public/todoapp.png)](https://res.cloudinary.com/ddbi0suli/video/upload/v1725936511/codetie/twitter_cursor_swift2_jnarb7.mp4)
 
 
@@ -74,6 +72,8 @@ Cursor-XCode-Swift-Sync/
 ## Built with Cursor-XCode-Swift-Sync
 
 [Flappy Bird Clone in Swift](https://github.com/regenrek/flappy-bird-clone-swift)
+[![Watch the video](/public/game.png)](https://res.cloudinary.com/ddbi0suli/video/upload/v1725936468/codetie/flappy_bird_zai8ig.mov)
+
 
 ## Customization
 
