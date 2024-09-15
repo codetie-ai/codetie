@@ -1,0 +1,36 @@
+{
+    "name": "codetie",
+    "version": "1.0.1",
+    "description": "Create iOS Apps and Games with Cursor AI & VSCode",
+    "homepage": "https://codetie.ai",
+    "author": "Kevin Regenrek",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/regenrek/codetie.git",
+        "directory": "packages/create-codetie"
+    },
+    "license": "MIT",
+    "scripts": {
+        "release": "release-it"
+    },
+    "bugs": {
+        "url": "https://github.com/regenrek/codetie/issues"
+    },
+    "keywords": [
+        "codetie",
+        "cli",
+        "xcode",
+        "swift",
+        "project-setup",
+        "cursor",
+        "cursor-ai"
+    ],
+    "dependencies": {
+        "chalk": "^5.3.0",
+        "inquirer": "^10.2.2",
+        "mustache": "^4.2.0",
+        "release-it": "^17.6.0",
+        "yargs": "^17.7.2",
+        "@release-it/conventional-changelog": "^8.0.1"
+    }
+}
