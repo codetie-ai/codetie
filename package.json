@@ -1,6 +1,6 @@
 {
   "name": "create-codetie",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to set up codetie projects",
   "homepage": "https://codetie.ai",
   "repository": "regenrek/codetie",
