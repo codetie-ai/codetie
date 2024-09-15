@@ -75,6 +75,18 @@
                 "showReuseMessage": true,
                 "clear": false
             }
+        },
+        {
+            "label": "Run with Simulator",
+            "type": "shell",
+            "command": "xcrun",
+            "args": [
+                "simctl",
+                "install",
+                "${input:simulatorId}",
+                "path/to/app.app"
+            ],
+            "dependsOn": "Build Swift Project"
         }
     ],
     "inputs": [

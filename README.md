@@ -22,38 +22,16 @@ Before you begin, ensure you have the following installed:
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen)
 - [SwiftLint](https://github.com/realm/SwiftLint) (optional, for linting)
 
-## Getting Started
+## Installation
 
-1. Clone this repository:
+Read docs at [codetie.ai](https://codetie.ai/docs)
 
-With pnpm:
-```
-pnpm dlx degit git@github.com:regenrek/Cursor-XCode-Swift-Sync.git <my-project-name>
-```
-
-With npm:
-```
-npx degit git@github.com:regenrek/Cursor-XCode-Swift-Sync.git <my-project-name>
-```
-
-Classic:
-```
-git clone --depth 1 git@github.com:regenrek/Cursor-XCode-Swift-Sync.git <my-project-name>
-cd <my-project-name>
-```
-
-2. Customize the `project.yml` file to match your project requirements.
-
-3. Run `chmod +x scripts/generate.sh`
+## Tasks
 
 4. Use VS Code tasks to manage your project:
    - Generate Xcode Project: `CMD+SHIFT+B` > "Tasks: Run Task" > "Generate Xcode Project with XcodeGen"
    - Build Swift Project: `CMD+SHIFT+B` > "Tasks: Run Task" > "Build Swift Project"
    - Run SwiftLint: `CMD+SHIFT+B` > "Tasks: Run Task" > "Run SwiftLint"
-
-   Note: The "Generate Xcode Project with XcodeGen" task runs automatically when you open the project folder.
-
-5. Open the generated `.xcodeproj` file and start developing!
 
 ## Project Structure
 
@@ -90,7 +68,7 @@ Edit the `project.yml` file to customize your project settings, targets, and con
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-1a). Clone this repository:
+1. Clone this repository:
 
 ```
 git clone https://github.com/regenrek/Cursor-XCode-Swift-Sync

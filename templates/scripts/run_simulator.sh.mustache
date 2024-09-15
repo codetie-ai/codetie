@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# run_simulator.sh
+
+APP_BUNDLE_ID="{{BUNDLE_ID_PREFIX}}.{{PROJECT_NAME}}"
+SIMULATOR_NAME="iPhone 14"
+
+# Boot the simulator
+xcrun simctl boot "$SIMULATOR_NAME"
+
+# Open the Simulator app
+open -a Simulator
+
+# Install the app
+xcrun simctl install "$SIMULATOR_NAME" "$(pwd)/build/Debug-iphonesimulator/{{PROJECT_NAME}}.app"
+
+# Launch the app
+xcrun simctl launch "$SIMULATOR_NAME" "$APP_BUNDLE_ID"

@@ -1,0 +1,21 @@
+{
+  "name": "create-codetie",
+  "version": "1.0.0",
+  "description": "CLI tool to set up codetie projects",
+  "bin": {
+    "create-codetie": "./index.js"
+  },
+  "keywords": [
+    "codetie",
+    "cli",
+    "xcode",
+    "swift",
+    "project-setup"
+  ],
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "inquirer": "^10.2.2",
+    "mustache": "^4.2.0",
+    "yargs": "^17.7.2"
+  }
+}
