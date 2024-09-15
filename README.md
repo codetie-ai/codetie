@@ -28,17 +28,17 @@ Before you begin, ensure you have the following installed:
 
 With pnpm:
 ```
-pnpm dlx degit git@github.com:regenrek/Cursor-XCode-Swift-Sync.git
+pnpm dlx degit git@github.com:regenrek/Cursor-XCode-Swift-Sync.git <my-project-name>
 ```
 
 With npm:
 ```
-npx degit git@github.com:regenrek/Cursor-XCode-Swift-Sync.git
+npx degit git@github.com:regenrek/Cursor-XCode-Swift-Sync.git <my-project-name>
 ```
 
 Classic:
 ```
-git clone --depth 1 git@github.com:regenrek/nuxt4-starter-clean.git <my-project-name>
+git clone --depth 1 git@github.com:regenrek/Cursor-XCode-Swift-Sync.git <my-project-name>
 cd <my-project-name>
 ```
 
@@ -72,7 +72,7 @@ Cursor-XCode-Swift-Sync/
 ## Built with Cursor-XCode-Swift-Sync
 
 [Flappy Bird Clone in Swift](https://github.com/regenrek/flappy-bird-clone-swift)
-[![Watch the video](/public/game.png)](https://res.cloudinary.com/ddbi0suli/video/upload/v1725936468/codetie/flappy_bird_zai8ig.mov)
+[![Watch the video](/public/game.png)](https://res.cloudinary.com/ddbi0suli/video/upload/v1726393407/codetie/flappy_bird_zai8ig_5_s7kmjt.mp4)
 
 
 ## Customization
