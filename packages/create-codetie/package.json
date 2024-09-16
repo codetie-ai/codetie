@@ -1,6 +1,6 @@
 {
   "name": "create-codetie",
-  "version": null,
+  "version": "1.0.2",
   "description": "CLI tool to set up codetie projects",
   "homepage": "https://codetie.ai",
   "type": "module",
