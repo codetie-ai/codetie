@@ -129,6 +129,10 @@ async function init() {
             fs.ensureDirSync(path.dirname(destPath));
             fs.writeFileSync(destPath, rendered);
             console.log(`Processed ${file}`);
+
+            // Remove the Mustache file after processing
+            fs.unlinkSync(srcPath);
+            console.log(`Removed ${file}`);
         } else {
             console.log(`Warning: ${file} not found in template directory`);
         }
