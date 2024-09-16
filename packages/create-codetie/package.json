@@ -1,8 +1,11 @@
 {
   "name": "create-codetie",
   "version": "1.0.6",
-  "description": "CLI tool to set up codetie projects",
-  "homepage": "https://codetie.ai",
+  "description": "Create a new codetie project",
+  "main": "index.js",
+  "bin": {
+    "create-codetie": "index.js"
+  },
   "type": "module",
   "repository": {
     "type": "git",
@@ -13,10 +16,8 @@
     "url": "https://github.com/regenrek/codetie/issues"
   },
   "license": "MIT",
-  "bin": {
-    "codetie-create": "./index.js"
-  },
   "scripts": {
+    "create": "tsx src/index.ts",
     "dev": "unbuild --stub",
     "build": "unbuild",
     "typecheck": "tsc --noEmit",
@@ -43,6 +44,8 @@
     "picocolors": "^1.1.0",
     "prompts": "^2.4.2",
     "unbuild": "^2.0.0",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/mustache": "^4.2.5"
   }
 }

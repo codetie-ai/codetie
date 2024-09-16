@@ -5,6 +5,11 @@ import prompts from 'prompts';
 import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 import Mustache from 'mustache';
+import { execSync } from 'child_process';
+
+// Add type declarations
+declare module 'fs-extra';
+declare module 'mustache';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,22 +20,40 @@ const renameFiles: Record<string, string | undefined> = {
 
 const mustacheFiles = [
     'project.yml.mustache',
-    'scripts/generate.sh.mustache',
     'scripts/run_simulator.sh.mustache',
-    'scripts/setup_project.sh.mustache',
     '.vscode/tasks.json.mustache',
-    '.vscode/settings.json.mustache',
-    '.vscode/extensions.json.mustache'
+    '.vscode/settings.json.mustache'
 ];
 
 async function init() {
     console.log(chalk.green('Welcome to the codetie (Sync swift + xcode) Project Setup 🚀\n'));
 
-    const argv = minimist(process.argv.slice(2), { string: ['_'] });
+    const argv = minimist(process.argv.slice(2), {
+        string: ['_', 'cwd'],
+        boolean: ['debug']
+    });
+
     let targetDir = argv._[0];
     const defaultProjectName = targetDir || 'codetie-project';
+    const debug = argv.debug || false;
+    const cwd = argv.cwd ? path.resolve(argv.cwd) : process.cwd();
 
-    const result = await prompts([
+    // Debug logging function
+    const debugLog = (message: string) => {
+        if (debug) {
+            const logMessage = `${new Date().toISOString()} - ${message}\n`;
+            fs.appendFileSync(path.join(cwd, targetDir, 'debug.log'), logMessage);
+        }
+    };
+
+    if (debug) {
+        console.log('Debug mode enabled');
+        debugLog('Debug mode enabled');
+        debugLog(`Command line arguments: ${JSON.stringify(argv)}`);
+        debugLog(`Current working directory: ${cwd}`);
+    }
+
+    const questions = [
         {
             type: targetDir ? null : 'text',
             name: 'projectName',
@@ -76,19 +99,24 @@ async function init() {
             message: 'Enter Build Number:',
             initial: '1',
         },
-    ]);
+    ];
 
-    const root = path.join(process.cwd(), targetDir);
+    const result = await prompts(questions);
+
+    const root = path.join(cwd, targetDir);
 
     if (fs.existsSync(root)) {
         if (fs.readdirSync(root).length === 0) {
-            console.log(`Directory ${chalk.cyan(targetDir)} is empty. Proceeding with project creation.`);
+            console.log(`Directory ${chalk.cyan(root)} is empty. Proceeding with project creation.`);
+            debugLog(`Directory ${root} is empty. Proceeding with project creation.`);
         } else {
-            console.log(chalk.red(`Error: Directory ${targetDir} is not empty. Please choose a different directory or empty it.`));
+            console.log(chalk.red(`Error: Directory ${root} is not empty. Please choose a different directory or empty it.`));
+            debugLog(`Error: Directory ${root} is not empty. Exiting.`);
             process.exit(1);
         }
     } else {
         fs.mkdirSync(root, { recursive: true });
+        debugLog(`Created directory: ${root}`);
     }
 
     const templateDir = path.resolve(__dirname, '../template');
@@ -98,8 +126,10 @@ async function init() {
         if (content) {
             fs.ensureDirSync(path.dirname(targetPath));
             fs.writeFileSync(targetPath, content);
+            debugLog(`Written file: ${targetPath}`);
         } else {
             copy(path.join(templateDir, file), targetPath);
+            debugLog(`Copied file: ${targetPath}`);
         }
     };
 
@@ -129,12 +159,15 @@ async function init() {
             fs.ensureDirSync(path.dirname(destPath));
             fs.writeFileSync(destPath, rendered);
             console.log(`Processed ${file}`);
+            debugLog(`Processed and written: ${destPath}`);
 
             // Remove the Mustache file after processing
             fs.unlinkSync(srcPath);
             console.log(`Removed ${file}`);
+            debugLog(`Removed Mustache file: ${srcPath}`);
         } else {
             console.log(`Warning: ${file} not found in template directory`);
+            debugLog(`Warning: ${file} not found in template directory`);
         }
     }
 
@@ -150,7 +183,27 @@ async function init() {
     };
     fs.writeFileSync(path.join(root, 'codetie.yml'), JSON.stringify(codetieConfig, null, 2));
 
+    // Ask if the project should be generated
+    const { generateProject } = await prompts({
+        type: 'confirm',
+        name: 'generateProject',
+        message: 'Do you want to generate the Xcode project now?',
+        initial: true
+    });
+
+    if (generateProject) {
+        console.log('\nGenerating Xcode project...');
+        try {
+            execSync('bash scripts/generate.sh', { cwd: root, stdio: 'inherit' });
+            console.log(chalk.green('\n✅ Xcode project generated successfully!'));
+        } catch (error) {
+            console.error(chalk.red('\n❌ Failed to generate Xcode project:'), error);
+        }
+    }
+
     console.log(chalk.green('\n✅ Project setup complete! Happy coding! 🎈\n'));
+    debugLog('Project setup complete');
+
     console.log('\nNext steps:');
     console.log(`  cd ${targetDir}`);
     console.log('  pnpm install');
