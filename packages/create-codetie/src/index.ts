@@ -13,6 +13,16 @@ const renameFiles: Record<string, string | undefined> = {
     _gitignore: '.gitignore',
 };
 
+const mustacheFiles = [
+    'project.yml.mustache',
+    'scripts/generate.sh.mustache',
+    'scripts/run_simulator.sh.mustache',
+    'scripts/setup_project.sh.mustache',
+    '.vscode/tasks.json.mustache',
+    '.vscode/settings.json.mustache',
+    '.vscode/extensions.json.mustache'
+];
+
 async function init() {
     console.log(chalk.green('Welcome to the codetie (Sync swift + xcode) Project Setup 🚀\n'));
 
@@ -30,7 +40,42 @@ async function init() {
                 targetDir = state.value.trim() || defaultProjectName;
             },
         },
-        // ... (keep your other prompts)
+        {
+            type: 'text',
+            name: 'bundleIdPrefix',
+            message: 'Enter Bundle ID Prefix:',
+            initial: 'com.zunderai',
+        },
+        {
+            type: 'text',
+            name: 'deploymentTarget',
+            message: 'Enter Deployment Target iOS Version:',
+            initial: '17.0',
+        },
+        {
+            type: 'text',
+            name: 'xcodeVersion',
+            message: 'Enter Xcode Version:',
+            initial: '15.3',
+        },
+        {
+            type: 'text',
+            name: 'swiftVersion',
+            message: 'Enter Swift Version:',
+            initial: '5.10.1',
+        },
+        {
+            type: 'text',
+            name: 'appVersion',
+            message: 'Enter App Version:',
+            initial: '1.0.0',
+        },
+        {
+            type: 'text',
+            name: 'buildNumber',
+            message: 'Enter Build Number:',
+            initial: '1',
+        },
     ]);
 
     const root = path.join(process.cwd(), targetDir);
@@ -51,6 +96,7 @@ async function init() {
     const write = (file: string, content?: string) => {
         const targetPath = path.join(root, renameFiles[file] ?? file);
         if (content) {
+            fs.ensureDirSync(path.dirname(targetPath));
             fs.writeFileSync(targetPath, content);
         } else {
             copy(path.join(templateDir, file), targetPath);
@@ -65,7 +111,6 @@ async function init() {
     // Process mustache templates
     const templateVariables = {
         projectName: targetDir,
-        setupType: result.setupType,
         bundleIdPrefix: result.bundleIdPrefix,
         deploymentTarget: result.deploymentTarget,
         xcodeVersion: result.xcodeVersion,
@@ -74,18 +119,24 @@ async function init() {
         buildNumber: result.buildNumber,
     };
 
-    const mustacheFiles = files.filter(file => file.endsWith('.mustache'));
     for (const file of mustacheFiles) {
-        const content = fs.readFileSync(path.join(templateDir, file), 'utf-8');
-        const rendered = Mustache.render(content, templateVariables);
-        write(file.replace('.mustache', ''), rendered);
-        fs.removeSync(path.join(root, file)); // Remove the original .mustache file
+        const srcPath = path.join(templateDir, file);
+        const destPath = path.join(root, file.replace('.mustache', ''));
+
+        if (fs.existsSync(srcPath)) {
+            const content = fs.readFileSync(srcPath, 'utf-8');
+            const rendered = Mustache.render(content, templateVariables);
+            fs.ensureDirSync(path.dirname(destPath));
+            fs.writeFileSync(destPath, rendered);
+            console.log(`Processed ${file}`);
+        } else {
+            console.log(`Warning: ${file} not found in template directory`);
+        }
     }
 
     // Generate codetie.yml
     const codetieConfig = {
         project_name: targetDir,
-        setup_type: result.setupType,
         bundle_id_prefix: result.bundleIdPrefix,
         deployment_target: result.deploymentTarget,
         xcode_version: result.xcodeVersion,
