@@ -9,7 +9,7 @@ import globals from 'globals'
 
 const require = createRequire(import.meta.url)
 const pkg = require('./package.json')
-const pkgVite = require('./packages/vite/package.json')
+const pkgVite = require('./packages/codetie/package.json')
 
 // Some rules work better with typechecking enabled, but as enabling it is slow,
 // we only do so when linting in IDEs for now. If you want to lint with typechecking
@@ -19,12 +19,11 @@ const shouldTypeCheck = typeof process.env.VSCODE_PID === 'string'
 export default tseslint.config(
     {
         ignores: [
-            'packages/create-vite/template-*',
+            'packages/create-codetie/template-*',
             '**/dist/**',
             '**/fixtures/**',
             '**/playground-temp/**',
             '**/temp/**',
-            '**/.vitepress/cache/**',
             '**/*.snap',
         ],
     },
@@ -42,7 +41,7 @@ export default tseslint.config(
                 project: shouldTypeCheck
                     ? [
                         './packages/*/tsconfig.json',
-                        './packages/vite/src/*/tsconfig.json',
+                        './packages/codetie/src/*/tsconfig.json',
                     ]
                     : undefined,
             },
@@ -78,20 +77,20 @@ export default tseslint.config(
                 'error',
                 {
                     // for try-catching yarn pnp
-                    allowModules: ['pnpapi', 'vite'],
+                    allowModules: ['pnpapi', 'codetie'],
                     tryExtensions: ['.ts', '.js', '.jsx', '.tsx', '.d.ts'],
                 },
             ],
             'n/no-extraneous-import': [
                 'error',
                 {
-                    allowModules: ['vite', 'less', 'sass', 'vitest', 'unbuild'],
+                    allowModules: ['codetie', 'less', 'sass', 'vitest', 'unbuild'],
                 },
             ],
             'n/no-extraneous-require': [
                 'error',
                 {
-                    allowModules: ['vite'],
+                    allowModules: ['codetie'],
                 },
             ],
 

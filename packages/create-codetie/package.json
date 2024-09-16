@@ -1,6 +1,6 @@
 {
   "name": "create-codetie",
-  "version": "1.0.1",
+  "version": null,
   "description": "CLI tool to set up codetie projects",
   "homepage": "https://codetie.ai",
   "type": "module",
@@ -32,16 +32,17 @@
     "cursor-ai"
   ],
   "dependencies": {
-    "chalk": "^5.3.0",
-    "inquirer": "^10.2.2",
-    "mustache": "^4.2.0",
-    "yargs": "^17.7.2",
     "@types/minimist": "^1.2.5",
     "@types/prompts": "^2.4.9",
+    "chalk": "^5.3.0",
     "cross-spawn": "^7.0.3",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^10.2.2",
     "minimist": "^1.2.8",
+    "mustache": "^4.2.0",
     "picocolors": "^1.1.0",
     "prompts": "^2.4.2",
-    "unbuild": "^2.0.0"
+    "unbuild": "^2.0.0",
+    "yargs": "^17.7.2"
   }
 }

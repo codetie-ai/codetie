@@ -1,31 +1,22 @@
-import { release } from '@vitejs/release-scripts'
-import colors from 'picocolors'
-import { logRecentCommits, run, updateTemplateVersions } from './releaseUtils'
-import extendCommitHash from './extendCommitHash'
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
-release({
-  repo: 'codetie',
-  packages: ['codetie', 'create-codetie'],
-  toTag: (pkg, version) =>
-    pkg === 'vite' ? `v${version}` : `${pkg}@${version}`,
-  logChangelog: (pkg) => logRecentCommits(pkg),
-  generateChangelog: async (pkgName) => {
-    if (pkgName === 'create-vite') await updateTemplateVersions()
+const packages = ['codetie', 'create-codetie'];
 
-    console.log(colors.cyan('\nGenerating changelog...'))
-    const changelogArgs = [
-      'conventional-changelog',
-      '-p',
-      'angular',
-      '-i',
-      'CHANGELOG.md',
-      '-s',
-      '--commit-path',
-      '.',
-    ]
-    if (pkgName !== 'vite') changelogArgs.push('--lerna-package', pkgName)
-    await run('npx', changelogArgs, { cwd: `packages/${pkgName}` })
-    // conventional-changelog generates links with short commit hashes, extend them to full hashes
-    extendCommitHash(`packages/${pkgName}/CHANGELOG.md`)
-  },
-})
+function run(command: string, cwd: string) {
+  console.log(`Executing: ${command} in ${cwd}`);
+  execSync(command, { stdio: 'inherit', cwd });
+}
+
+async function publishPackages() {
+  for (const pkg of packages) {
+    const pkgPath = path.resolve(`packages/${pkg}`);
+    const pkgJson = JSON.parse(fs.readFileSync(path.join(pkgPath, 'package.json'), 'utf-8'));
+
+    console.log(`Publishing ${pkg}@${pkgJson.version}...`);
+    run('pnpm publish --no-git-checks', pkgPath);
+  }
+}
+
+publishPackages().catch(console.error);

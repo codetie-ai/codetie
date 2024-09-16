@@ -19,7 +19,7 @@ export async function getLatestTag(pkgName: string): Promise<string> {
         await fs.readFile(`packages/${pkgName}/package.json`, 'utf-8'),
     )
     const version = pkgJson.version
-    return pkgName === 'vite' ? `v${version}` : `${pkgName}@${version}`
+    return pkgName === 'codetie' ? `v${version}` : `${pkgName}@${version}`
 }
 
 export async function logRecentCommits(pkgName: string): Promise<void> {
@@ -51,20 +51,20 @@ export async function logRecentCommits(pkgName: string): Promise<void> {
 }
 
 export async function updateTemplateVersions(): Promise<void> {
-    const vitePkgJson = JSON.parse(
-        await fs.readFile('packages/vite/package.json', 'utf-8'),
+    const codetiePkgJson = JSON.parse(
+        await fs.readFile('packages/codetie/package.json', 'utf-8'),
     )
-    const viteVersion = vitePkgJson.version
-    if (/beta|alpha|rc/.test(viteVersion)) return
+    const codetieVersion = codetiePkgJson.version
+    if (/beta|alpha|rc/.test(codetieVersion)) return
 
-    const dir = 'packages/create-vite'
+    const dir = 'packages/create-codetie'
     const templates = (await fs.readdir(dir)).filter((dir) =>
         dir.startsWith('template-'),
     )
     for (const template of templates) {
         const pkgPath = path.join(dir, template, `package.json`)
         const pkg = JSON.parse(await fs.readFile(pkgPath, 'utf-8'))
-        pkg.devDependencies.vite = `^` + viteVersion
+        pkg.devDependencies.codetie = `^` + codetieVersion
         await fs.writeFile(pkgPath, JSON.stringify(pkg, null, 2) + '\n')
     }
 }

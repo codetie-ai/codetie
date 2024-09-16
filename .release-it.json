@@ -1,0 +1,27 @@
+{
+    "git": {
+        "commitMessage": "chore: release v${version}",
+        "tagName": "v${version}",
+        "pushRepo": "origin main"
+    },
+    "npm": {
+        "publish": true
+    },
+    "plugins": {
+        "@release-it/conventional-changelog": {
+            "preset": "angular",
+            "infile": "CHANGELOG.md"
+        },
+        "@release-it/bumper": {
+            "out": [
+                "package.json",
+                "packages/*/package.json"
+            ]
+        }
+    },
+    "hooks": {
+        "after:bump": "pnpm install",
+        "after:git:release": "echo Successfully released ${name} v${version} to ${repo.repository}.",
+        "after:release": "echo Successfully released ${name} v${version}. Now you can publish the packages individually."
+    }
+}
