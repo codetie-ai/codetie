@@ -17,8 +17,9 @@
     "lint": "eslint --cache .",
     "typecheck": "tsc -p scripts --noEmit && pnpm -r --parallel run typecheck",
     "build": "pnpm -r --filter='./packages/*' run build",
-    "release": "tsx scripts/release.ts",
-    "release-it": "npx release-it --git.pushRepo=https://github.com/regenrek/codetie.git"
+    "publish": "pnpm -r --filter='./packages/*' run build && npx release-it --git.pushRepo=https://github.com/regenrek/codetie.git && tsx scripts/release.ts",
+    "release": "pnpm run build && npx release-it --git.pushRepo=https://github.com/regenrek/codetie.git",
+    "publish-npm": "tsx scripts/release.ts"
   },
   "keywords": [
     "codetie",
