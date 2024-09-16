@@ -161,10 +161,13 @@ async function init() {
             console.log(`Processed ${file}`);
             debugLog(`Processed and written: ${destPath}`);
 
-            // Remove the Mustache file after processing
-            fs.unlinkSync(srcPath);
-            console.log(`Removed ${file}`);
-            debugLog(`Removed Mustache file: ${srcPath}`);
+            // Remove the Mustache file from the target directory after processing
+            const targetMustacheFile = path.join(root, file);
+            if (fs.existsSync(targetMustacheFile)) {
+                fs.unlinkSync(targetMustacheFile);
+                console.log(`Removed ${file} from target directory`);
+                debugLog(`Removed Mustache file from target directory: ${targetMustacheFile}`);
+            }
         } else {
             console.log(`Warning: ${file} not found in template directory`);
             debugLog(`Warning: ${file} not found in template directory`);
@@ -196,6 +199,24 @@ async function init() {
         try {
             execSync('bash scripts/generate.sh', { cwd: root, stdio: 'inherit' });
             console.log(chalk.green('\n✅ Xcode project generated successfully!'));
+
+            // Ask if the user wants to start the project with simulator
+            const { startSimulator } = await prompts({
+                type: 'confirm',
+                name: 'startSimulator',
+                message: 'Do you want to start the project with the simulator now?',
+                initial: true
+            });
+
+            if (startSimulator) {
+                console.log('\nStarting the project in simulator...');
+                try {
+                    execSync('bash scripts/run_simulator.sh', { cwd: root, stdio: 'inherit' });
+                    console.log(chalk.green('\n✅ Project started in simulator successfully!'));
+                } catch (error) {
+                    console.error(chalk.red('\n❌ Failed to start project in simulator:'), error);
+                }
+            }
         } catch (error) {
             console.error(chalk.red('\n❌ Failed to generate Xcode project:'), error);
         }

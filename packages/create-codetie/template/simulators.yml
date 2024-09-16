@@ -1,0 +1,10 @@
+defaultAlways: false
+default: "iPhone 14"
+simulators:
+  - "iPhone 14"
+  - "iPhone 14 Pro"
+  - "iPhone 14 Pro Max"
+  - "iPhone SE (3rd generation)"
+  - "iPad Air (5th generation)"
+  - "iPad Pro (11-inch) (4th generation)"
+  - "iPad Pro (12.9-inch) (6th generation)"

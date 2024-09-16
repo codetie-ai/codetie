@@ -51,7 +51,8 @@
         "type": "shell",
         "command": "sh",
         "args": [
-            "${workspaceFolder}/scripts/run_simulator.sh"
+            "${workspaceFolder}/scripts/run_simulator.sh",
+            "${input:simulator}"
         ],
         "problemMatcher": [],
         "dependsOn": "Build Swift Project",
@@ -94,7 +95,46 @@
             "{{PROJECT_NAME}}"
         ],
         "default": "{{PROJECT_NAME}}"
+        },
+        {
+        "id": "simulator",
+        "type": "command",
+        "command": "extension.commandvariable.file.content",
+        "args": {
+            "fileName": "${workspaceFolder}/simulators.yml",
+            "key": "defaultAlways",
+            "default": "false",
+            "transformers": [
+            {
+                "type": "conditional",
+                "default": "${command:extension.commandvariable.file.content}",
+                "config": {
+                "cases": [
+                    {
+                    "compare": "true",
+                    "value": "${command:extension.commandvariable.file.content}",
+                    "args": {
+                        "fileName": "${workspaceFolder}/simulators.yml",
+                        "key": "default"
+                    }
+                    }
+                ],
+                "fallback": "${input:chooseSimulator}"
+                }
+            }
+            ]
+        }
+        },
+        {
+        "id": "chooseSimulator",
+        "type": "command",
+        "command": "extension.commandvariable.file.content",
+        "args": {
+            "fileName": "${workspaceFolder}/simulators.yml",
+            "key": "simulators",
+            "type": "pickString",
+            "description": "Choose a simulator"
+        }
         }
     ]
 }
-  
