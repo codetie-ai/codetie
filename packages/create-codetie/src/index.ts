@@ -6,6 +6,7 @@ import chalk from 'chalk';
 import { fileURLToPath } from 'url';
 import Mustache from 'mustache';
 import { execSync } from 'child_process';
+import os from 'os'; // Import os module
 
 // Add type declarations
 declare module 'fs-extra';
@@ -41,8 +42,10 @@ async function init() {
     // Debug logging function
     const debugLog = (message: string) => {
         if (debug) {
+            const cwd = process.cwd() || os.tmpdir(); // Use os.tmpdir() as fallback
+            const logPath = path.join(cwd, 'debug.log');
             const logMessage = `${new Date().toISOString()} - ${message}\n`;
-            fs.appendFileSync(path.join(cwd, targetDir, 'debug.log'), logMessage);
+            fs.appendFileSync(logPath, logMessage);
         }
     };
 
@@ -59,7 +62,7 @@ async function init() {
             name: 'projectName',
             message: 'Project name:',
             initial: defaultProjectName,
-            onState: (state) => {
+            onState: (state: { value: string }) => {
                 targetDir = state.value.trim() || defaultProjectName;
             },
         },
@@ -101,7 +104,7 @@ async function init() {
         },
     ];
 
-    const result = await prompts(questions);
+    const result = await prompts(questions as prompts.PromptObject[]);
 
     const root = path.join(cwd, targetDir);
 
@@ -140,13 +143,13 @@ async function init() {
 
     // Process mustache templates
     const templateVariables = {
-        projectName: targetDir,
-        bundleIdPrefix: result.bundleIdPrefix,
-        deploymentTarget: result.deploymentTarget,
-        xcodeVersion: result.xcodeVersion,
-        swiftVersion: result.swiftVersion,
-        appVersion: result.appVersion,
-        buildNumber: result.buildNumber,
+        PROJECT_NAME: targetDir,
+        BUNDLE_ID_PREFIX: result.bundleIdPrefix,
+        DEPLOYMENT_TARGET: result.deploymentTarget,
+        XCODE_VERSION: result.xcodeVersion,
+        SWIFT_VERSION: result.swiftVersion,
+        APP_VERSION: result.appVersion,
+        BUILD_NUMBER: result.buildNumber,
     };
 
     for (const file of mustacheFiles) {
@@ -174,6 +177,15 @@ async function init() {
         }
     }
 
+    // Rename _project folder to the correct name
+    const oldProjectDir = path.join(root, '_project');
+    const newProjectDir = path.join(root, targetDir);
+    if (fs.existsSync(oldProjectDir)) {
+        fs.renameSync(oldProjectDir, newProjectDir);
+        console.log(`Renamed _project folder to ${targetDir}`);
+        debugLog(`Renamed _project folder: ${oldProjectDir} -> ${newProjectDir}`);
+    }
+
     // Generate codetie.yml
     const codetieConfig = {
         project_name: targetDir,
@@ -197,6 +209,37 @@ async function init() {
     if (generateProject) {
         console.log('\nGenerating Xcode project...');
         try {
+            // Create necessary directories
+            // const projectDir = path.join(root, targetDir);
+            // fs.mkdirSync(projectDir, { recursive: true });
+            // debugLog(`Created project directory: ${projectDir}`);
+
+            // Rename _main.swift and update its content
+            const oldMainSwift = path.join(newProjectDir, '_main.swift');
+            const newMainSwift = path.join(newProjectDir, `${targetDir}App.swift`);
+            if (fs.existsSync(oldMainSwift)) {
+                // Read and update the content
+                let mainSwiftContent = fs.readFileSync(oldMainSwift, 'utf-8');
+                mainSwiftContent = mainSwiftContent.replace('HelloWorldApp', `${targetDir}App`);
+
+                // Write the updated content to the new file
+                fs.writeFileSync(newMainSwift, mainSwiftContent);
+
+                // Remove the old file
+                fs.unlinkSync(oldMainSwift);
+
+                console.log(`Renamed and updated _main.swift to ${targetDir}App.swift`);
+                debugLog(`Renamed and updated _main.swift: ${oldMainSwift} -> ${newMainSwift}`);
+            }
+
+            // Create subdirectories (adjust as needed)
+            const subdirs = ['View'];
+            for (const subdir of subdirs) {
+                const fullPath = path.join(newProjectDir, subdir);
+                fs.mkdirSync(fullPath, { recursive: true });
+                debugLog(`Created subdirectory: ${fullPath}`);
+            }
+
             execSync('bash scripts/generate.sh', { cwd: root, stdio: 'inherit' });
             console.log(chalk.green('\n✅ Xcode project generated successfully!'));
 

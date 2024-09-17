@@ -1,0 +1,305 @@
+2024-09-16T13:15:34.947Z - Debug mode enabled
+2024-09-16T13:15:34.948Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T13:15:34.948Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T13:15:44.491Z - Error: Directory /Users/kevin/projects/swift/testing-codetie/codetie-project is not empty. Exiting.
+2024-09-16T13:15:57.175Z - Debug mode enabled
+2024-09-16T13:15:57.176Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T13:15:57.176Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T13:16:02.682Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test2
+2024-09-16T13:16:02.684Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test2/.cursorrules
+2024-09-16T13:16:02.684Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test2/.swiftlint.yml
+2024-09-16T13:16:02.685Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test2/.vscode
+2024-09-16T13:16:02.685Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test2/README.md
+2024-09-16T13:16:02.686Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test2/.gitignore
+2024-09-16T13:16:02.686Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test2/package.json
+2024-09-16T13:16:02.687Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test2/scripts
+2024-09-16T13:16:02.687Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test2/simulators.yml
+2024-09-16T13:16:02.687Z - Warning: project.yml.mustache not found in template directory
+2024-09-16T13:16:02.688Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test2/scripts/run_simulator.sh
+2024-09-16T13:16:02.688Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test2/scripts/run_simulator.sh.mustache
+2024-09-16T13:16:02.690Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test2/.vscode/tasks.json
+2024-09-16T13:16:02.690Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test2/.vscode/tasks.json.mustache
+2024-09-16T13:16:02.690Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test2/.vscode/settings.json
+2024-09-16T13:16:02.690Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test2/.vscode/settings.json.mustache
+2024-09-16T13:16:05.774Z - Project setup complete
+2024-09-16T13:17:18.322Z - Debug mode enabled
+2024-09-16T13:17:18.323Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T13:17:18.323Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T13:17:22.889Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test3
+2024-09-16T13:17:22.890Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/.cursorrules
+2024-09-16T13:17:22.890Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/.swiftlint.yml
+2024-09-16T13:17:22.890Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/.vscode
+2024-09-16T13:17:22.890Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/README.md
+2024-09-16T13:17:22.891Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/.gitignore
+2024-09-16T13:17:22.891Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/package.json
+2024-09-16T13:17:22.891Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/project.yml.mustache
+2024-09-16T13:17:22.891Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/scripts
+2024-09-16T13:17:22.891Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test3/simulators.yml
+2024-09-16T13:17:22.893Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test3/project.yml
+2024-09-16T13:17:22.893Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test3/project.yml.mustache
+2024-09-16T13:17:22.894Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test3/scripts/run_simulator.sh
+2024-09-16T13:17:22.894Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test3/scripts/run_simulator.sh.mustache
+2024-09-16T13:17:22.895Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test3/.vscode/tasks.json
+2024-09-16T13:17:22.895Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test3/.vscode/tasks.json.mustache
+2024-09-16T13:17:22.895Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test3/.vscode/settings.json
+2024-09-16T13:17:22.895Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test3/.vscode/settings.json.mustache
+2024-09-16T13:17:24.136Z - Project setup complete
+2024-09-16T13:21:55.621Z - Debug mode enabled
+2024-09-16T13:21:55.622Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T13:21:55.622Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T13:22:05.264Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test4
+2024-09-16T13:22:05.264Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/.cursorrules
+2024-09-16T13:22:05.265Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/.swiftlint.yml
+2024-09-16T13:22:05.265Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/.vscode
+2024-09-16T13:22:05.265Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/README.md
+2024-09-16T13:22:05.265Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/.gitignore
+2024-09-16T13:22:05.266Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/package.json
+2024-09-16T13:22:05.266Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/project.yml.mustache
+2024-09-16T13:22:05.266Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/scripts
+2024-09-16T13:22:05.266Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test4/simulators.yml
+2024-09-16T13:22:05.268Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test4/project.yml
+2024-09-16T13:22:05.268Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test4/project.yml.mustache
+2024-09-16T13:22:05.268Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test4/scripts/run_simulator.sh
+2024-09-16T13:22:05.268Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test4/scripts/run_simulator.sh.mustache
+2024-09-16T13:22:05.270Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test4/.vscode/tasks.json
+2024-09-16T13:22:05.270Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test4/.vscode/tasks.json.mustache
+2024-09-16T13:22:05.271Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test4/.vscode/settings.json
+2024-09-16T13:22:05.271Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test4/.vscode/settings.json.mustache
+2024-09-16T13:22:07.042Z - Project setup complete
+2024-09-16T13:30:38.727Z - Debug mode enabled
+2024-09-16T13:30:38.728Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T13:30:38.728Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T13:30:54.676Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test5
+2024-09-16T13:30:54.678Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/.cursorrules
+2024-09-16T13:30:54.678Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/.swiftlint.yml
+2024-09-16T13:30:54.680Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/.vscode
+2024-09-16T13:30:54.680Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/README.md
+2024-09-16T13:30:54.681Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/.gitignore
+2024-09-16T13:30:54.681Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/package.json
+2024-09-16T13:30:54.682Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/project.yml.mustache
+2024-09-16T13:30:54.683Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/scripts
+2024-09-16T13:30:54.684Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test5/simulators.yml
+2024-09-16T13:30:54.687Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test5/project.yml
+2024-09-16T13:30:54.687Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test5/project.yml.mustache
+2024-09-16T13:30:54.688Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test5/scripts/run_simulator.sh
+2024-09-16T13:30:54.688Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test5/scripts/run_simulator.sh.mustache
+2024-09-16T13:30:54.690Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test5/.vscode/tasks.json
+2024-09-16T13:30:54.691Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test5/.vscode/tasks.json.mustache
+2024-09-16T13:30:54.691Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test5/.vscode/settings.json
+2024-09-16T13:30:54.691Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test5/.vscode/settings.json.mustache
+2024-09-16T13:30:55.903Z - Created project directory: /Users/kevin/projects/swift/testing-codetie/test5/test5
+2024-09-16T13:30:55.904Z - Created subdirectory: /Users/kevin/projects/swift/testing-codetie/test5/test5/View
+2024-09-16T13:31:55.588Z - Project setup complete
+2024-09-16T14:02:24.672Z - Debug mode enabled
+2024-09-16T14:02:24.674Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T14:02:24.674Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T14:02:29.678Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test8
+2024-09-16T14:02:29.680Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/.cursorrules
+2024-09-16T14:02:29.681Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/.swiftlint.yml
+2024-09-16T14:02:29.682Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/.vscode
+2024-09-16T14:02:29.682Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/README.md
+2024-09-16T14:02:29.683Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/.gitignore
+2024-09-16T14:02:29.684Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/_project
+2024-09-16T14:02:29.685Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/package.json
+2024-09-16T14:02:29.685Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/project.yml.mustache
+2024-09-16T14:02:29.686Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/scripts
+2024-09-16T14:02:29.686Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test8/simulators.yml
+2024-09-16T14:02:29.689Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test8/project.yml
+2024-09-16T14:02:29.690Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test8/project.yml.mustache
+2024-09-16T14:02:29.691Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test8/scripts/run_simulator.sh
+2024-09-16T14:02:29.692Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test8/scripts/run_simulator.sh.mustache
+2024-09-16T14:02:29.694Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test8/.vscode/tasks.json
+2024-09-16T14:02:29.694Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test8/.vscode/tasks.json.mustache
+2024-09-16T14:02:29.695Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test8/.vscode/settings.json
+2024-09-16T14:02:29.695Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test8/.vscode/settings.json.mustache
+2024-09-16T14:02:29.695Z - Renamed _project folder: /Users/kevin/projects/swift/testing-codetie/test8/_project -> /Users/kevin/projects/swift/testing-codetie/test8/test8
+2024-09-16T14:02:32.691Z - Renamed and updated _main.swift: /Users/kevin/projects/swift/testing-codetie/test8/test8/_main.swift -> /Users/kevin/projects/swift/testing-codetie/test8/test8/test8App.swift
+2024-09-16T14:02:32.696Z - Project setup complete
+2024-09-16T14:03:33.578Z - Debug mode enabled
+2024-09-16T14:03:33.579Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T14:03:33.579Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T14:03:37.738Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test9
+2024-09-16T14:03:37.740Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/.cursorrules
+2024-09-16T14:03:37.740Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/.swiftlint.yml
+2024-09-16T14:03:37.742Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/.vscode
+2024-09-16T14:03:37.742Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/README.md
+2024-09-16T14:03:37.743Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/.gitignore
+2024-09-16T14:03:37.743Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/_project
+2024-09-16T14:03:37.744Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/package.json
+2024-09-16T14:03:37.744Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/project.yml.mustache
+2024-09-16T14:03:37.746Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/scripts
+2024-09-16T14:03:37.746Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test9/simulators.yml
+2024-09-16T14:03:37.749Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test9/project.yml
+2024-09-16T14:03:37.749Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test9/project.yml.mustache
+2024-09-16T14:03:37.751Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test9/scripts/run_simulator.sh
+2024-09-16T14:03:37.751Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test9/scripts/run_simulator.sh.mustache
+2024-09-16T14:03:37.753Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test9/.vscode/tasks.json
+2024-09-16T14:03:37.753Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test9/.vscode/tasks.json.mustache
+2024-09-16T14:03:37.754Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test9/.vscode/settings.json
+2024-09-16T14:03:37.754Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test9/.vscode/settings.json.mustache
+2024-09-16T14:03:37.755Z - Renamed _project folder: /Users/kevin/projects/swift/testing-codetie/test9/_project -> /Users/kevin/projects/swift/testing-codetie/test9/test9
+2024-09-16T14:03:38.754Z - Renamed and updated _main.swift: /Users/kevin/projects/swift/testing-codetie/test9/test9/_main.swift -> /Users/kevin/projects/swift/testing-codetie/test9/test9/test9App.swift
+2024-09-16T14:03:38.755Z - Created subdirectory: /Users/kevin/projects/swift/testing-codetie/test9/test9/View
+2024-09-16T14:03:40.185Z - Project setup complete
+2024-09-16T14:06:45.283Z - Debug mode enabled
+2024-09-16T14:06:45.285Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T14:06:45.285Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T14:06:48.138Z - Error: Directory /Users/kevin/projects/swift/testing-codetie/test9 is not empty. Exiting.
+2024-09-16T14:06:51.959Z - Debug mode enabled
+2024-09-16T14:06:51.960Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T14:06:51.960Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T14:06:54.593Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test10
+2024-09-16T14:06:54.595Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/.cursorrules
+2024-09-16T14:06:54.595Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/.swiftlint.yml
+2024-09-16T14:06:54.596Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/.vscode
+2024-09-16T14:06:54.597Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/README.md
+2024-09-16T14:06:54.597Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/.gitignore
+2024-09-16T14:06:54.598Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/_project
+2024-09-16T14:06:54.598Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/package.json
+2024-09-16T14:06:54.598Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/project.yml.mustache
+2024-09-16T14:06:54.600Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/scripts
+2024-09-16T14:06:54.600Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test10/simulators.yml
+2024-09-16T14:06:54.603Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test10/project.yml
+2024-09-16T14:06:54.603Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test10/project.yml.mustache
+2024-09-16T14:06:54.605Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test10/scripts/run_simulator.sh
+2024-09-16T14:06:54.605Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test10/scripts/run_simulator.sh.mustache
+2024-09-16T14:06:54.607Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test10/.vscode/tasks.json
+2024-09-16T14:06:54.608Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test10/.vscode/tasks.json.mustache
+2024-09-16T14:06:54.608Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test10/.vscode/settings.json
+2024-09-16T14:06:54.608Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test10/.vscode/settings.json.mustache
+2024-09-16T14:06:54.608Z - Renamed _project folder: /Users/kevin/projects/swift/testing-codetie/test10/_project -> /Users/kevin/projects/swift/testing-codetie/test10/test10
+2024-09-16T14:06:54.751Z - Renamed and updated _main.swift: /Users/kevin/projects/swift/testing-codetie/test10/test10/_main.swift -> /Users/kevin/projects/swift/testing-codetie/test10/test10/test10App.swift
+2024-09-16T14:06:54.751Z - Created subdirectory: /Users/kevin/projects/swift/testing-codetie/test10/test10/View
+2024-09-16T14:06:55.956Z - Project setup complete
+2024-09-16T18:12:25.595Z - Debug mode enabled
+2024-09-16T18:12:25.597Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T18:12:25.597Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T18:12:28.806Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test11
+2024-09-16T18:12:28.808Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/.cursorrules
+2024-09-16T18:12:28.808Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/.swiftlint.yml
+2024-09-16T18:12:28.809Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/.vscode
+2024-09-16T18:12:28.809Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/README.md
+2024-09-16T18:12:28.810Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/.gitignore
+2024-09-16T18:12:28.811Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/_project
+2024-09-16T18:12:28.811Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/package.json
+2024-09-16T18:12:28.811Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/project.yml.mustache
+2024-09-16T18:12:28.813Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/scripts
+2024-09-16T18:12:28.813Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test11/simulators.yml
+2024-09-16T18:12:28.816Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test11/project.yml
+2024-09-16T18:12:28.817Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test11/project.yml.mustache
+2024-09-16T18:12:28.817Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test11/scripts/run_simulator.sh
+2024-09-16T18:12:28.817Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test11/scripts/run_simulator.sh.mustache
+2024-09-16T18:12:28.819Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test11/.vscode/tasks.json
+2024-09-16T18:12:28.819Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test11/.vscode/tasks.json.mustache
+2024-09-16T18:12:28.820Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test11/.vscode/settings.json
+2024-09-16T18:12:28.820Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test11/.vscode/settings.json.mustache
+2024-09-16T18:12:28.820Z - Renamed _project folder: /Users/kevin/projects/swift/testing-codetie/test11/_project -> /Users/kevin/projects/swift/testing-codetie/test11/test11
+2024-09-16T18:12:32.208Z - Renamed and updated _main.swift: /Users/kevin/projects/swift/testing-codetie/test11/test11/_main.swift -> /Users/kevin/projects/swift/testing-codetie/test11/test11/test11App.swift
+2024-09-16T18:12:32.209Z - Created subdirectory: /Users/kevin/projects/swift/testing-codetie/test11/test11/View
+2024-09-16T18:12:32.974Z - Project setup complete
+2024-09-16T18:46:29.013Z - Debug mode enabled
+2024-09-16T18:46:29.015Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T18:46:29.015Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T18:46:32.812Z - Created directory: /Users/kevin/projects/swift/testing-codetie/test13
+2024-09-16T18:46:32.814Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/.cursorrules
+2024-09-16T18:46:32.814Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/.swiftlint.yml
+2024-09-16T18:46:32.816Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/.vscode
+2024-09-16T18:46:32.816Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/README.md
+2024-09-16T18:46:32.816Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/.gitignore
+2024-09-16T18:46:32.818Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/_project
+2024-09-16T18:46:32.818Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/package.json
+2024-09-16T18:46:32.819Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/project.yml.mustache
+2024-09-16T18:46:32.820Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/scripts
+2024-09-16T18:46:32.821Z - Copied file: /Users/kevin/projects/swift/testing-codetie/test13/simulators.yml
+2024-09-16T18:46:32.824Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test13/project.yml
+2024-09-16T18:46:32.824Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test13/project.yml.mustache
+2024-09-16T18:46:32.825Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test13/scripts/run_simulator.sh
+2024-09-16T18:46:32.825Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test13/scripts/run_simulator.sh.mustache
+2024-09-16T18:46:32.827Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test13/.vscode/tasks.json
+2024-09-16T18:46:32.827Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test13/.vscode/tasks.json.mustache
+2024-09-16T18:46:32.828Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/test13/.vscode/settings.json
+2024-09-16T18:46:32.828Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/test13/.vscode/settings.json.mustache
+2024-09-16T18:46:32.828Z - Renamed _project folder: /Users/kevin/projects/swift/testing-codetie/test13/_project -> /Users/kevin/projects/swift/testing-codetie/test13/test13
+2024-09-16T18:46:32.986Z - Renamed and updated _main.swift: /Users/kevin/projects/swift/testing-codetie/test13/test13/_main.swift -> /Users/kevin/projects/swift/testing-codetie/test13/test13/test13App.swift
+2024-09-16T18:46:32.986Z - Created subdirectory: /Users/kevin/projects/swift/testing-codetie/test13/test13/View
+2024-09-16T18:46:37.189Z - Project setup complete
+2024-09-16T18:50:44.459Z - Debug mode enabled
+2024-09-16T18:50:44.461Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T18:50:44.461Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T18:50:55.159Z - Created directory: /Users/kevin/projects/swift/testing-codetie/tasks15
+2024-09-16T18:50:55.161Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/.cursorrules
+2024-09-16T18:50:55.162Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/.swiftlint.yml
+2024-09-16T18:50:55.163Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/.vscode
+2024-09-16T18:50:55.164Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/README.md
+2024-09-16T18:50:55.165Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/.gitignore
+2024-09-16T18:50:55.166Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/_project
+2024-09-16T18:50:55.167Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/package.json
+2024-09-16T18:50:55.167Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/project.yml.mustache
+2024-09-16T18:50:55.170Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/scripts
+2024-09-16T18:50:55.170Z - Copied file: /Users/kevin/projects/swift/testing-codetie/tasks15/simulators.yml
+2024-09-16T18:50:55.173Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/tasks15/project.yml
+2024-09-16T18:50:55.173Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/tasks15/project.yml.mustache
+2024-09-16T18:50:55.174Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/tasks15/scripts/run_simulator.sh
+2024-09-16T18:50:55.174Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/tasks15/scripts/run_simulator.sh.mustache
+2024-09-16T18:50:55.177Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/tasks15/.vscode/tasks.json
+2024-09-16T18:50:55.177Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/tasks15/.vscode/tasks.json.mustache
+2024-09-16T18:50:55.178Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/tasks15/.vscode/settings.json
+2024-09-16T18:50:55.178Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/tasks15/.vscode/settings.json.mustache
+2024-09-16T18:50:55.179Z - Renamed _project folder: /Users/kevin/projects/swift/testing-codetie/tasks15/_project -> /Users/kevin/projects/swift/testing-codetie/tasks15/tasks15
+2024-09-16T18:50:57.817Z - Renamed and updated _main.swift: /Users/kevin/projects/swift/testing-codetie/tasks15/tasks15/_main.swift -> /Users/kevin/projects/swift/testing-codetie/tasks15/tasks15/tasks15App.swift
+2024-09-16T18:50:57.818Z - Created subdirectory: /Users/kevin/projects/swift/testing-codetie/tasks15/tasks15/View
+2024-09-16T18:50:59.558Z - Project setup complete
+2024-09-16T18:56:04.437Z - Debug mode enabled
+2024-09-16T18:56:04.438Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T18:56:04.438Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T18:56:08.628Z - Error: Directory /Users/kevin/projects/swift/testing-codetie/codetie-project is not empty. Exiting.
+2024-09-16T18:56:10.079Z - Debug mode enabled
+2024-09-16T18:56:10.080Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T18:56:10.080Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T18:56:13.737Z - Created directory: /Users/kevin/projects/swift/testing-codetie/16
+2024-09-16T18:56:13.739Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/.cursorrules
+2024-09-16T18:56:13.739Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/.swiftlint.yml
+2024-09-16T18:56:13.741Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/.vscode
+2024-09-16T18:56:13.741Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/README.md
+2024-09-16T18:56:13.742Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/.gitignore
+2024-09-16T18:56:13.743Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/_project
+2024-09-16T18:56:13.744Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/package.json
+2024-09-16T18:56:13.744Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/project.yml.mustache
+2024-09-16T18:56:13.746Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/scripts
+2024-09-16T18:56:13.746Z - Copied file: /Users/kevin/projects/swift/testing-codetie/16/simulators.yml
+2024-09-16T18:56:13.749Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/16/project.yml
+2024-09-16T18:56:13.750Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/16/project.yml.mustache
+2024-09-16T18:56:13.750Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/16/scripts/run_simulator.sh
+2024-09-16T18:56:13.751Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/16/scripts/run_simulator.sh.mustache
+2024-09-16T18:56:13.754Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/16/.vscode/tasks.json
+2024-09-16T18:56:13.754Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/16/.vscode/tasks.json.mustache
+2024-09-16T18:56:13.755Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/16/.vscode/settings.json
+2024-09-16T18:56:13.755Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/16/.vscode/settings.json.mustache
+2024-09-16T18:56:13.756Z - Renamed _project folder: /Users/kevin/projects/swift/testing-codetie/16/_project -> /Users/kevin/projects/swift/testing-codetie/16/16
+2024-09-16T18:56:15.018Z - Project setup complete
+2024-09-16T18:56:17.748Z - Debug mode enabled
+2024-09-16T18:56:17.749Z - Command line arguments: {"_":[],"debug":true,"cwd":"/Users/kevin/projects/swift/testing-codetie/"}
+2024-09-16T18:56:17.749Z - Current working directory: /Users/kevin/projects/swift/testing-codetie
+2024-09-16T18:56:21.229Z - Created directory: /Users/kevin/projects/swift/testing-codetie/task2
+2024-09-16T18:56:21.231Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/.cursorrules
+2024-09-16T18:56:21.231Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/.swiftlint.yml
+2024-09-16T18:56:21.233Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/.vscode
+2024-09-16T18:56:21.233Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/README.md
+2024-09-16T18:56:21.234Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/.gitignore
+2024-09-16T18:56:21.234Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/_project
+2024-09-16T18:56:21.235Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/package.json
+2024-09-16T18:56:21.236Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/project.yml.mustache
+2024-09-16T18:56:21.237Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/scripts
+2024-09-16T18:56:21.237Z - Copied file: /Users/kevin/projects/swift/testing-codetie/task2/simulators.yml
+2024-09-16T18:56:21.239Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/task2/project.yml
+2024-09-16T18:56:21.239Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/task2/project.yml.mustache
+2024-09-16T18:56:21.241Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/task2/scripts/run_simulator.sh
+2024-09-16T18:56:21.241Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/task2/scripts/run_simulator.sh.mustache
+2024-09-16T18:56:21.243Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/task2/.vscode/tasks.json
+2024-09-16T18:56:21.243Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/task2/.vscode/tasks.json.mustache
+2024-09-16T18:56:21.243Z - Processed and written: /Users/kevin/projects/swift/testing-codetie/task2/.vscode/settings.json
+2024-09-16T18:56:21.244Z - Removed Mustache file from target directory: /Users/kevin/projects/swift/testing-codetie/task2/.vscode/settings.json.mustache
+2024-09-16T18:56:21.244Z - Renamed _project folder: /Users/kevin/projects/swift/testing-codetie/task2/_project -> /Users/kevin/projects/swift/testing-codetie/task2/task2
+2024-09-16T18:56:21.454Z - Renamed and updated _main.swift: /Users/kevin/projects/swift/testing-codetie/task2/task2/_main.swift -> /Users/kevin/projects/swift/testing-codetie/task2/task2/task2App.swift
+2024-09-16T18:56:21.454Z - Created subdirectory: /Users/kevin/projects/swift/testing-codetie/task2/task2/View
+2024-09-16T18:56:22.636Z - Project setup complete

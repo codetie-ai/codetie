@@ -17,9 +17,10 @@
         {
         "label": "Build Swift Project",
         "type": "shell",
-        "command": "sh",
+        "command": "ts-node",
         "args": [
-            "${workspaceFolder}/scripts/build_project.sh",
+            "${workspaceFolder}/scripts/project-scripts.ts",
+            "build",
             "${input:xcodeproj}"
         ],
         "problemMatcher": [
@@ -43,9 +44,10 @@
         {
         "label": "Run with Simulator",
         "type": "shell",
-        "command": "sh",
+        "command": "ts-node",
         "args": [
-            "${workspaceFolder}/scripts/run_simulator.sh",
+            "${workspaceFolder}/scripts/project-scripts.ts",
+            "run",
             "${input:simulator}"
         ],
         "problemMatcher": [],
