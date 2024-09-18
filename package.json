@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/regenrek/codetie.git"
+    "url": "git+https://github.com/codetie-ai/codetie.git"
   },
   "license": "MIT",
   "bin": {
@@ -17,8 +17,8 @@
     "lint": "eslint --cache .",
     "typecheck": "tsc -p scripts --noEmit && pnpm -r --parallel run typecheck",
     "build": "pnpm -r --filter='./packages/*' run build",
-    "publish": "pnpm -r --filter='./packages/*' run build && npx release-it --git.pushRepo=https://github.com/regenrek/codetie.git && tsx scripts/release.ts",
-    "release": "pnpm run build && npx release-it --git.pushRepo=https://github.com/regenrek/codetie.git",
+    "publish": "pnpm -r --filter='./packages/*' run build && npx release-it --git.pushRepo=https://github.com/codetie-ai/codetie.git && tsx scripts/release.ts",
+    "release": "pnpm run build && npx release-it --git.pushRepo=https://github.com/codetie-ai/codetie.git",
     "publish-npm": "tsx scripts/release.ts",
     "test-create": "pnpm -F create-codetie run create --debug --cwd /Users/kevin/projects/swift/testing-codetie"
   },
