@@ -1,13 +1,61 @@
 #!/bin/bash
 
 # Get the simulator name from the argument, or use the default if not provided
-SIMULATOR_NAME="${1:-$(yq e '.default' simulators.yml)}"
+SIMULATOR_NAME="${1:-iPhone 15 Pro}"
 
-# Run the simulator
-xcrun simctl boot "$SIMULATOR_NAME"
+# Get the simulator ID
+SIMULATOR_ID=$(xcrun simctl list devices | grep "$SIMULATOR_NAME" | grep -E -o -i "([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})" | head -n 1)
 
-# Launch the app (replace APP_BUNDLE_ID with your actual app bundle ID)
-xcrun simctl launch booted {{APP_BUNDLE_ID}}
+# Debugging: Print the retrieved SIMULATOR_ID
+# echo "Retrieved SIMULATOR_ID: $SIMULATOR_ID"
 
-# Open the simulator window
+if [ -z "$SIMULATOR_ID" ]; then
+    echo "Error: Simulator '$SIMULATOR_NAME' not found."
+    exit 1
+fi
+
+# Set variables
+SCHEME_NAME="{{PROJECT_NAME}}"  # Use environment variable or default
+APP_BUNDLE_ID="{{BUNDLE_ID_PREFIX}}.$SCHEME_NAME"  # Use environment variable or generate from SCHEME_NAME
+APP_PATH="$(pwd)/build/Build/Products/Debug-iphonesimulator/$SCHEME_NAME.app"
+
+# Print the variables for verification
+echo "Using the following settings:"
+echo "SIMULATOR_NAME: $SIMULATOR_NAME"
+echo "SIMULATOR_ID: $SIMULATOR_ID"
+echo "SCHEME_NAME: $SCHEME_NAME"
+echo "APP_BUNDLE_ID: $APP_BUNDLE_ID"
+echo "APP_PATH: $APP_PATH"
+
+# Ensure the simulator is shutdown before booting
+echo "Shutting down simulator if it's running..."
+xcrun simctl shutdown "$SIMULATOR_ID"
+
+# Boot the simulator
+echo "Booting simulator..."
+xcrun simctl boot "$SIMULATOR_ID" || { echo "Error: Failed to boot simulator with ID $SIMULATOR_ID"; exit 1; }
+
+# Wait until the simulator is fully booted
+echo "Waiting for simulator to boot..."
+while [[ "$(xcrun simctl list devices | grep "$SIMULATOR_ID" | grep -o "Booted")" != "Booted" ]]; do
+    sleep 1
+done
+
+# Open Simulator
+echo "Opening Simulator..."
 open -a Simulator
+
+if [ -z "$APP_PATH" ]; then
+    echo "Error: Built app not found."
+    exit 1
+fi
+
+# Install the app
+echo "Installing app..."
+xcrun simctl install booted "$APP_PATH"
+
+# Launch the app
+echo "Launching app..."
+xcrun simctl launch booted "$APP_BUNDLE_ID"
+
+echo "Done!"
