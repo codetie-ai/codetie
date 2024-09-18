@@ -20,7 +20,7 @@
     "publish": "pnpm -r --filter='./packages/*' run build && npx release-it --git.pushRepo=https://github.com/regenrek/codetie.git && tsx scripts/release.ts",
     "release": "pnpm run build && npx release-it --git.pushRepo=https://github.com/regenrek/codetie.git",
     "publish-npm": "tsx scripts/release.ts",
-    "test-create": "pnpm -F create-codetie run create --debug --cwd /Users/timkernegger/projects/swift/testing-codetie"
+    "test-create": "pnpm -F create-codetie run create --debug --cwd /Users/kevin/projects/swift/testing-codetie"
   },
   "keywords": [
     "codetie",
