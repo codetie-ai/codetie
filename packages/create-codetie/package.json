@@ -1,6 +1,6 @@
 {
   "name": "create-codetie",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Create a new codetie project",
   "main": "index.js",
   "bin": {
