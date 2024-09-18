@@ -9,11 +9,11 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/regenrek/codetie.git",
+    "url": "git+https://github.com/codetie-ai/codetie.git",
     "directory": "packages/create-codetie"
   },
   "bugs": {
-    "url": "https://github.com/regenrek/codetie/issues"
+    "url": "https://github.com/codetie-ai/codetie/issues"
   },
   "license": "MIT",
   "scripts": {

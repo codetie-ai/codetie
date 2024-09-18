@@ -50,7 +50,10 @@
         ],
         "problemMatcher": [],
         "dependsOn": "Build Swift Project",
-        "group": "build"
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
         },
         {
         "label": "Start Inject Hot Reload Server",
@@ -91,33 +94,18 @@
         "default": "{{PROJECT_NAME}}"
         },
         {
-        "id": "simulator",
-        "type": "command",
-        "command": "extension.commandvariable.file.content",
-        "args": {
-            "fileName": "${workspaceFolder}/simulators.yml",
-            "key": "defaultAlways",
-            "default": "false",
-            "transformers": [
-            {
-                "type": "conditional",
-                "default": "${command:extension.commandvariable.file.content}",
-                "config": {
-                "cases": [
-                    {
-                    "compare": "true",
-                    "value": "${command:extension.commandvariable.file.content}",
-                    "args": {
-                        "fileName": "${workspaceFolder}/simulators.yml",
-                        "key": "default"
-                    }
-                    }
-                ],
-                "fallback": "${input:chooseSimulator}"
-                }
-            }
-            ]
-        }
+            "id": "simulator",
+            "type": "pickString",
+            "description": "Choose a simulator",
+            "options": [
+                "iPhone 16 Pro",
+                "iPhone 15 Pro",
+                "iPhone 15",
+                "iPhone 14 Pro",
+                "iPad Pro (12.9-inch) (6th generation)"
+                // Add more simulator options as needed
+            ],
+            "default": "iPhone 15 Pro"
         },
         {
         "id": "chooseSimulator",
