@@ -1,3 +1,4 @@
+import Inject
 import SwiftUI
 
 struct ContentView: View {
@@ -8,13 +9,15 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)
                 .foregroundColor(.orange)
-            
+
             Text("Hello, World!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding()
         }
+        .enableInjection()
     }
+    @ObserveInjection var redraw
 }
 
 #Preview {

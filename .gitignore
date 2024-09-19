@@ -103,3 +103,4 @@ dist
 .idea
 .env
 .data
+packages/create-codetie/debug.log

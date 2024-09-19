@@ -18,7 +18,6 @@ targets:
         ENABLE_TESTABILITY: YES
     dependencies:
       - package: Inject
-        product: Inject
     info:
       path: {{PROJECT_NAME}}/Info.plist
       properties:
@@ -40,6 +39,9 @@ schemes:
         {{PROJECT_NAME}}: all
     run:
       config: Debug
+
+configFiles:
+  Debug: {{PROJECT_NAME}}/debug.xcconfig
 
 configs:
   Debug: debug
