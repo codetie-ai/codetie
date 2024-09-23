@@ -1,0 +1,7 @@
+project_name: "exampleProject"
+bundle_id_prefix: "com.example"
+deployment_target: "17.0"
+xcode_version: "15.3"
+swift_version: "5.10.1"
+app_version: "1.0.0"
+build_number: "1"

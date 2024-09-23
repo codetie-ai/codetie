@@ -11,7 +11,10 @@
   },
   "license": "MIT",
   "scripts": {
-    "release": "release-it"
+    "release": "release-it",
+    "play:generate": "jiti index.ts generate --cwd ./playground",
+    "play:build": "jiti index.ts build --cwd ./playground",
+    "play:preview": "jiti index.ts preview --cwd ./playground"
   },
   "bugs": {
     "url": "https://github.com/codetie-ai/codetie/issues"
@@ -26,11 +29,17 @@
     "cursor-ai"
   ],
   "dependencies": {
-    "chalk": "^5.3.0",
-    "inquirer": "^10.2.2",
-    "mustache": "^4.2.0",
-    "release-it": "^17.6.0",
-    "yargs": "^17.7.2",
-    "@release-it/conventional-changelog": "^8.0.1"
+    "@release-it/conventional-changelog": "^8.0.1",
+    "c12": "^1.11.2",
+    "citty": "^0.1.6",
+    "consola": "^3.2.3",
+    "destr": "^2.0.3",
+    "execa": "^9.3.1",
+    "jiti": "^1.21.6",
+    "pathe": "^1.1.2",
+    "release-it": "^17.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5"
   }
 }

@@ -1,0 +1,29 @@
+disabled_rules:
+  - line_length              # Disable if long lines are frequently unavoidable
+  - trailing_whitespace      # Manage this rule based on team preferences
+  - file_length              # Disable for larger files like data models
+  - cyclomatic_complexity    # Disable if complex functions are unavoidable
+  - force_cast               # Be cautious but allow force casting where necessary
+  - force_unwrapping         # Allow force unwrapping for simplicity in some cases
+  - large_tuple              # Manage tuple size based on specific needs
+  - function_body_length     # Disable if longer functions are necessary
+  - type_body_length         # Disable if types naturally grow large
+
+opt_in_rules:
+  - empty_count              # Prefer `.isEmpty` over counting elements
+  - closure_end_indentation  # Align closing brackets for better readability
+  - sorted_first_last        # Use `.first` and `.last` instead of `.sorted()`
+  - strict_fileprivate       # Enforce using `fileprivate` when appropriate
+  - redundant_nil_coalescing # Avoid unnecessary nil coalescing
+
+included:
+  - Sources
+  - Tests
+
+excluded:
+  - Carthage
+  - Pods
+  - .build
+  - Generated
+
+reporter: "xcode"
