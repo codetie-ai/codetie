@@ -9,12 +9,27 @@
     "url": "git+https://github.com/codetie-ai/codetie.git",
     "directory": "packages/create-codetie"
   },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./cli": "./bin/codetie.mjs"
+  },
   "license": "MIT",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "codetie": "./bin/codetie.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
     "release": "release-it",
-    "play:generate": "jiti index.ts generate --cwd ./playground",
-    "play:build": "jiti index.ts build --cwd ./playground",
-    "play:preview": "jiti index.ts preview --cwd ./playground"
+    "build": "unbuild",
+    "codetie": "node ./bin/codetie.mjs",
+    "play:generate": "node ./bin/codetie.mjs generate --cwd ./playground",
+    "play:build": "node ./bin/codetie.mjs build --cwd ./playground",
+    "play:preview": "node ./bin/codetie.mjs preview --cwd ./playground"
   },
   "bugs": {
     "url": "https://github.com/codetie-ai/codetie/issues"
@@ -37,9 +52,11 @@
     "execa": "^9.3.1",
     "jiti": "^1.21.6",
     "pathe": "^1.1.2",
-    "release-it": "^17.6.0"
+    "release-it": "^17.6.0",
+    "unbuild": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.5.5"
-  }
+  },
+  "packageManager": "pnpm@9.11.0"
 }

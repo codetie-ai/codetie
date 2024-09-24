@@ -104,6 +104,9 @@ importers:
       release-it:
         specifier: ^17.6.0
         version: 17.6.0(typescript@5.6.2)
+      unbuild:
+        specifier: ^2.0.0
+        version: 2.0.0(typescript@5.6.2)
     devDependencies:
       '@types/node':
         specifier: ^22.5.5
@@ -126,6 +129,9 @@ importers:
       chalk:
         specifier: ^5.3.0
         version: 5.3.0
+      codetie:
+        specifier: workspace:*
+        version: link:../codetie
       cross-spawn:
         specifier: ^7.0.3
         version: 7.0.3
