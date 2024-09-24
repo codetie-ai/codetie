@@ -29,14 +29,12 @@ export function copyDir(src: string, dest: string) {
 export function writeFile(path: string, content: string) {
   const destDir = resolve(path, "..");
   fs.ensureDirSync(destDir);
-  console.info("writeFile", path);
   fs.writeFileSync(path, content);
 }
 
 export function copyFile(src: string, dest: string) {
   const destDir = resolve(dest, "..");
   fs.ensureDirSync(destDir);
-  console.info("copyFile", dest);
   fs.copyFileSync(src, dest);
 }
 
