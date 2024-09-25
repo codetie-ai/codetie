@@ -75,7 +75,7 @@ export default defineCommand({
         }
       )
 
-      if (typeof selectedSimulator === 'string') {
+      if (typeof selectedSimulator === 'symbol') {
         process.exit(1)
       }
 
