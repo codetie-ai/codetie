@@ -7,11 +7,29 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/codetie-ai/codetie.git",
-    "directory": "packages/create-codetie"
+    "directory": "packages/codetie"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./cli": "./bin/codetie.mjs"
   },
   "license": "MIT",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "codetie": "./bin/codetie.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
-    "release": "release-it"
+    "release": "release-it",
+    "build": "unbuild",
+    "codetie": "node ./bin/codetie.mjs",
+    "play:generate": "node ./bin/codetie.mjs generate --cwd ./playground",
+    "play:build": "node ./bin/codetie.mjs build --cwd ./playground",
+    "play:preview": "node ./bin/codetie.mjs preview --cwd ./playground"
   },
   "bugs": {
     "url": "https://github.com/codetie-ai/codetie/issues"
@@ -26,11 +44,19 @@
     "cursor-ai"
   ],
   "dependencies": {
-    "chalk": "^5.3.0",
-    "inquirer": "^10.2.2",
-    "mustache": "^4.2.0",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "c12": "^1.11.2",
+    "citty": "^0.1.6",
+    "consola": "^3.2.3",
+    "destr": "^2.0.3",
+    "execa": "^9.3.1",
+    "jiti": "^1.21.6",
+    "pathe": "^1.1.2",
     "release-it": "^17.6.0",
-    "yargs": "^17.7.2",
-    "@release-it/conventional-changelog": "^8.0.1"
-  }
+    "unbuild": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5"
+  },
+  "packageManager": "pnpm@9.11.0"
 }

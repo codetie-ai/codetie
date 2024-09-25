@@ -1,0 +1,52 @@
+name: exampleProject
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: 17.0
+  xcodeVersion: "15.3"
+  generateEmptyDirectories: true
+  createIntermediateGroups: true
+
+targets:
+  exampleProject:
+    type: application
+    platform: iOS
+    sources: [exampleProject]
+    settings:
+      base:
+        SWIFT_VERSION: 5.10.1
+        ENABLE_TESTABILITY: YES
+    dependencies:
+      - package: Inject
+      - package: HotReloading
+    info:
+      path: exampleProject/Info.plist
+      properties:
+        CFBundleShortVersionString: "1.0.0"
+        CFBundleVersion: "1"
+        UILaunchStoryboardName: LaunchScreen
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+
+packages:
+  Inject:
+    url: https://github.com/krzysztofzablocki/Inject.git
+    from: "1.2.0"
+  HotReloading:
+    url: https://github.com/johnno1962/HotReloading.git
+    from: "5.0.7"
+
+schemes:
+  exampleProject:
+    build:
+      targets:
+        exampleProject: all
+    run:
+      config: Debug
+
+configFiles:
+  Debug: exampleProject/debug.xcconfig
+
+configs:
+  Debug: debug
+  Release: release
