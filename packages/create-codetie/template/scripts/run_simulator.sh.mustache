@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get the simulator name from the argument, or use the default if not provided
-SIMULATOR_NAME="${1:-iPhone 15 Pro}"
+SIMULATOR_NAME="${1:-iPhone 14}"
 
 # Get the simulator ID
 SIMULATOR_ID=$(xcrun simctl list devices | grep "$SIMULATOR_NAME" | grep -E -o -i "([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})" | head -n 1)

@@ -1,0 +1,24 @@
+{
+    "kind": "xcode",
+    "project": "fresh1.xcodeproj",
+    "scheme": "com.fresh1",
+    "configuration": "Debug",
+    "sdk": "iphonesimulator",
+    "destination": {
+        "platform": "iOS Simulator",
+        "name": "iPhone 15 Pro",
+        "OS": "17.0"
+    },
+    "build_root": "/Users/kevin/projects/swift/testing-codetie/build",
+    "build_args": [
+        "ONLY_ACTIVE_ARCH=YES",
+        "DEVELOPMENT_TEAM=",
+        "CODE_SIGN_IDENTITY=",
+        "CODE_SIGNING_REQUIRED=NO",
+        "CODE_SIGNING_ALLOWED=NO"
+    ],
+    "actions": [
+        "clean",
+        "build"
+    ]
+}
