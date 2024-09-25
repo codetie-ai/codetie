@@ -129,10 +129,7 @@ const main = defineCommand({
       // 6. install dependencies
       await installDependenciesPrompts(root);
 
-      consola.success("Project setup complete! Happy coding! 🎈");
-      consola.box(
-        "Next steps:\n\ncd " + projectName + "\npnpm install\npnpm dev"
-      );
+      consola.box("Project setup complete! Happy coding! 🎈");
     } catch (error) {
       consola.error(error);
       process.exit(1);
