@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate project",
+            "type": "shell",
+            "command": "npx codetie generate",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build project",
+            "type": "shell",
+            "command": "npx codetie build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Preview project",
+            "type": "shell",
+            "command": "npx codetie preview",
+            "problemMatcher": []
+        }
+    ]
+}
